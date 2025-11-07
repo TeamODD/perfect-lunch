@@ -15,3 +15,4 @@ MonoBehaviour:
   carbohydrate: 2
   protein: 60
   fat: 38
+  type: meat
