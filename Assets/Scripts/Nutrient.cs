@@ -5,5 +5,6 @@ public class Nutrient : ScriptableObject
 {
     public int carbohydrate;
     public int protein;
-    public int fat; 
+    public int fat;
+    public string type;
 }
