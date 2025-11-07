@@ -15,3 +15,4 @@ MonoBehaviour:
   carbohydrate: 95
   protein: 3
   fat: 2
+  type: vegetable
