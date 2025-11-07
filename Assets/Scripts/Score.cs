@@ -13,8 +13,9 @@ public class Score : MonoBehaviour
     [SerializeField] float score=0;
     [SerializeField] float finalScore=0;
     [SerializeField] TextMeshProUGUI finalScoreText;
+    public int index;
     public bool preference = false;
-    public void AddFood(int index, float amount)//음식 인덱스와 양을 넣으면 영양소 값 더해짐
+    public void AddFood(float amount)//음식 인덱스와 양을 넣으면 영양소 값 더해짐
     {
         carbohydrate += FoodDB[index].carbohydrate * amount;
         protein+= FoodDB[index].protein * amount;

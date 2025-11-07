@@ -201,7 +201,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 60101836}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1913653756}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: SelectFood
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 7
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &60101836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -458,7 +470,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 105774547}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1913653756}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: SelectFood
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &105774547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -715,7 +739,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 193345375}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1913653756}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: SelectFood
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 8
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &193345375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -811,7 +847,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: 00:00
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ce7f129c0a4ef2f40aaa9ae7fba7539c, type: 2}
   m_sharedMaterial: {fileID: 5605492430593886916, guid: ce7f129c0a4ef2f40aaa9ae7fba7539c, type: 2}
@@ -820,8 +856,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -947,7 +983,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ce7f129c0a4ef2f40aaa9ae7fba7539c, type: 2}
   m_sharedMaterial: {fileID: 5605492430593886916, guid: ce7f129c0a4ef2f40aaa9ae7fba7539c, type: 2}
@@ -1108,7 +1144,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 262679679}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1913653756}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: SelectFood
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &262679679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1204,7 +1252,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: "\uC544\uBCF4\uCE74\uB3C4"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ce7f129c0a4ef2f40aaa9ae7fba7539c, type: 2}
   m_sharedMaterial: {fileID: 5605492430593886916, guid: ce7f129c0a4ef2f40aaa9ae7fba7539c, type: 2}
@@ -1365,7 +1413,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 361924612}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1913653756}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: SelectFood
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &361924612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1486,7 +1546,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 379687382}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1913653756}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: SelectFood
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &379687382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1607,7 +1679,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 382393975}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1913653756}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: SelectFood
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &382393975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1728,7 +1812,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 497354869}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1913653756}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: SelectFood
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &497354869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1805,11 +1901,27 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1913653756}
           m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-          m_MethodName: ShowFood1
-          m_Mode: 1
+          m_MethodName: MoveMinusX2
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 502645707}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1913653756}
+          m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+          m_MethodName: MovePlusX2
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 502645707}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -1939,11 +2051,27 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1913653756}
           m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-          m_MethodName: ShowFood1
-          m_Mode: 1
+          m_MethodName: MoveMinusX2
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 505868779}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1913653756}
+          m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+          m_MethodName: MovePlusX2
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 505868779}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -2181,7 +2309,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uB3FC\uC9C0\uACE0\uAE30"
+  m_text: '
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ce7f129c0a4ef2f40aaa9ae7fba7539c, type: 2}
   m_sharedMaterial: {fileID: 5605492430593886916, guid: ce7f129c0a4ef2f40aaa9ae7fba7539c, type: 2}
@@ -2342,7 +2472,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 643200472}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1913653756}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: SelectFood
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &643200472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2438,7 +2580,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ce7f129c0a4ef2f40aaa9ae7fba7539c, type: 2}
   m_sharedMaterial: {fileID: 5605492430593886916, guid: ce7f129c0a4ef2f40aaa9ae7fba7539c, type: 2}
@@ -2925,7 +3067,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uC0DD\uC120"
+  m_text: '
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ce7f129c0a4ef2f40aaa9ae7fba7539c, type: 2}
   m_sharedMaterial: {fileID: 5605492430593886916, guid: ce7f129c0a4ef2f40aaa9ae7fba7539c, type: 2}
@@ -3358,7 +3502,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 921169275}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1913653756}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: SelectFood
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &921169275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3479,7 +3635,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 922426708}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1913653756}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: SelectFood
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &922426708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3575,7 +3743,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uB3FC\uC9C0\uACE0\uAE30"
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ce7f129c0a4ef2f40aaa9ae7fba7539c, type: 2}
   m_sharedMaterial: {fileID: 5605492430593886916, guid: ce7f129c0a4ef2f40aaa9ae7fba7539c, type: 2}
@@ -3736,7 +3904,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 956597277}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1913653756}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: SelectFood
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 6
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &956597277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3857,7 +4037,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1019406215}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1913653756}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: SelectFood
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1019406215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3958,11 +4150,27 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1913653756}
           m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-          m_MethodName: ShowMeats
-          m_Mode: 1
+          m_MethodName: MovePlusX
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 1032662902}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1913653756}
+          m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+          m_MethodName: MoveMinusX
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1032662902}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -4063,7 +4271,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ce7f129c0a4ef2f40aaa9ae7fba7539c, type: 2}
   m_sharedMaterial: {fileID: 5605492430593886916, guid: ce7f129c0a4ef2f40aaa9ae7fba7539c, type: 2}
@@ -4199,7 +4407,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ce7f129c0a4ef2f40aaa9ae7fba7539c, type: 2}
   m_sharedMaterial: {fileID: 5605492430593886916, guid: ce7f129c0a4ef2f40aaa9ae7fba7539c, type: 2}
@@ -4360,7 +4568,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1057344182}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1913653756}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: SelectFood
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 9
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1057344182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4481,7 +4701,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1087442422}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1913653756}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: SelectFood
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1087442422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4577,7 +4809,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ce7f129c0a4ef2f40aaa9ae7fba7539c, type: 2}
   m_sharedMaterial: {fileID: 5605492430593886916, guid: ce7f129c0a4ef2f40aaa9ae7fba7539c, type: 2}
@@ -4722,8 +4954,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -4849,7 +5081,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ce7f129c0a4ef2f40aaa9ae7fba7539c, type: 2}
   m_sharedMaterial: {fileID: 5605492430593886916, guid: ce7f129c0a4ef2f40aaa9ae7fba7539c, type: 2}
@@ -5121,7 +5353,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uC0DD\uC120"
+  m_text: "\uB2EC\uAC40"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ce7f129c0a4ef2f40aaa9ae7fba7539c, type: 2}
   m_sharedMaterial: {fileID: 5605492430593886916, guid: ce7f129c0a4ef2f40aaa9ae7fba7539c, type: 2}
@@ -5282,7 +5514,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1704778136}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1913653756}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: SelectFood
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1704778136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5359,11 +5603,27 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1913653756}
           m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-          m_MethodName: ShowFood1
-          m_Mode: 1
+          m_MethodName: MovePlusX
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 1713157651}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1913653756}
+          m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+          m_MethodName: MoveMinusX
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1713157651}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -5431,6 +5691,81 @@ RectTransform:
   m_AnchoredPosition: {x: -1610, y: -200}
   m_SizeDelta: {x: 1500, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1751698921
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1751698922}
+  - component: {fileID: 1751698924}
+  - component: {fileID: 1751698923}
+  m_Layer: 5
+  m_Name: Table
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1751698922
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751698921}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1793764734}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 220}
+  m_SizeDelta: {x: 2500, y: 1800}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1751698923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751698921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -8841490917199087839, guid: 4b1d6432e435bc04c98a282c4196f9ee, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1751698924
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751698921}
+  m_CullTransparentMesh: 1
 --- !u!1 &1756015594
 GameObject:
   m_ObjectHideFlags: 0
@@ -5513,7 +5848,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1756015597}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1913653756}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: SelectFood
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1756015597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5782,6 +6129,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1751698922}
   - {fileID: 257119441}
   - {fileID: 1208782672}
   - {fileID: 1032662903}
@@ -5877,7 +6225,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1836674376}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1913653756}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: SelectFood
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1836674376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5998,7 +6358,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1876519235}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1913653756}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: SelectFood
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1876519235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6085,6 +6457,7 @@ MonoBehaviour:
   score: 0
   finalScore: 0
   finalScoreText: {fileID: 1208782673}
+  index: 0
   preference: 0
 --- !u!4 &1913653754
 Transform:
@@ -6132,6 +6505,8 @@ MonoBehaviour:
   Grains: {fileID: 1713157651}
   Fruits: {fileID: 502645707}
   Dairy: {fileID: 505868779}
+  Table: {fileID: 1751698921}
+  score: {fileID: 1913653753}
 --- !u!1 &1939843994
 GameObject:
   m_ObjectHideFlags: 0
@@ -6214,7 +6589,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1939843997}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1913653756}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: SelectFood
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1939843997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6310,7 +6697,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ce7f129c0a4ef2f40aaa9ae7fba7539c, type: 2}
   m_sharedMaterial: {fileID: 5605492430593886916, guid: ce7f129c0a4ef2f40aaa9ae7fba7539c, type: 2}

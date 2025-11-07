@@ -4,10 +4,12 @@ using DG.Tweening;
 
 public class UIManager : MonoBehaviour
 {
-    public GameObject Meats;
-    public GameObject Grains;
-    public GameObject Fruits;
-    public GameObject Dairy;
+    [SerializeField] GameObject Meats;
+    [SerializeField] GameObject Grains;
+    [SerializeField] GameObject Fruits;
+    [SerializeField] GameObject Dairy;
+    [SerializeField] GameObject Table;
+    [SerializeField] Score score;   
 
     public void MovePlusX(GameObject obj)
     {
@@ -25,4 +27,10 @@ public class UIManager : MonoBehaviour
     {
         obj.transform.DOLocalMoveX(220, 2.0f);
     }
+    public void SelectFood(int index)//재료 선택하면 실행하는 함수
+    { 
+        score.index = index;
+        Table.gameObject.SetActive(true);
+    }
+
 }
