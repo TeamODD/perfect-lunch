@@ -14,15 +14,15 @@ public class Score : MonoBehaviour
     [SerializeField] float score=0;
     [SerializeField] float finalScore=0;
     [SerializeField] TextMeshProUGUI finalScoreText;
-    [SerializeField] List<string> preferenceList;//손님이 어떤 재료를 선호하는지 리스트화
+    [SerializeField] List<string> preferenceList;//손님이 어떤 재료를 선호하는지 리스트화    
     int preferencePlus=0;//선호도로 얼마나 보너스를 받는지
     public int index;//현재 조리하는 음식의 인덱스(UI매니저에서 할당)
     public void AddFood(float amount)//음식 인덱스와 양을 넣으면 영양소 값 더해짐
     {
         carbohydrate += FoodDB[index].carbohydrate * amount;
-        protein+= FoodDB[index].protein * amount;
-        fat+= FoodDB[index].fat * amount;
-        if (FoodDB[index].type == preferenceList[uimanager.cindex]&&preferencePlus<500)//손님이 선호하고 선호도 추가점수가 500미만이면
+        protein += FoodDB[index].protein * amount;
+        fat += FoodDB[index].fat * amount;
+        if (FoodDB[index].type == preferenceList[uimanager.cindex] && preferencePlus < 500)//손님이 선호하고 선호도 추가점수가 500미만이면
         {
             preferencePlus += 100;//선호 보너스 +100
         }
@@ -44,5 +44,7 @@ public class Score : MonoBehaviour
         preferencePlus = 0;
         finalScore += score;
         finalScoreText.text = ""+finalScore;
+
+        uimanager.CustomerOutCo();
     }
 }
