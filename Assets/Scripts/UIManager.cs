@@ -16,9 +16,12 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject Table;
     [SerializeField] GameObject Tutorial;
     [SerializeField] GameObject Dialogue;
+    [SerializeField] GameObject Cook;
+    [SerializeField] GameObject CookFood;//삭제하기 위해 임시저장
     [SerializeField] Score score;
     [SerializeField] Timer timer;
     [SerializeField] List<GameObject> customers;
+    [SerializeField] List<GameObject> foodPrefabs;
     [SerializeField] List<int> randomList;//손님 인덱스를 랜덤으로 저장한 리스트
     [SerializeField] int cnt=0;//손님 수
     [SerializeField] TextMeshProUGUI CountText;
@@ -53,6 +56,7 @@ public class UIManager : MonoBehaviour
             score.index = index;
             Table.gameObject.SetActive(true);
             iscook = true;//현재 재료손질 중이라는 뜻
+            CookFood=Instantiate(foodPrefabs[index],Cook.transform);
         }    
     }
     public void Shuffle()//마지막 인덱스가 처음으로 나오지 않게 손님순서 셔플
