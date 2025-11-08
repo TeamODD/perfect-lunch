@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a90586c7767ca0d488fc7ebb5491589f
+guid: 2079d3039d852b440b46de1bb9f59eb3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8678448789981272047
-    second: chicken_0
+      213: 2011944690989267674
+    second: "\uB4B7\uBC30\uACBD_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -24,7 +24,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 1
+  isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: chicken_0
+      name: "\uB4B7\uBC30\uACBD_0"
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 788
-        height: 416
+        width: 2505
+        height: 1614
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fe79040b13b007870800000000000000
-      internalID: 8678448789981272047
+      spriteID: adaf526690ddbeb10800000000000000
+      internalID: 2011944690989267674
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      chicken_0: 8678448789981272047
+      "\uB4B7\uBC30\uACBD_0": 2011944690989267674
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
