@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 6bd1d548c3199154ea215dd79cc939ba
+guid: 8ea0953f81cbba442af6a5e838901585
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 183833955000803451
-    second: ride_0
+      213: 469865270953055245
+    second: "\uB3C4\uB9C8_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -24,7 +24,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 1
+  isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ride_0
+      name: "\uB3C4\uB9C8_0"
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 723
-        height: 477
+        x: 237
+        y: 57
+        width: 539
+        height: 238
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b706a71120c1d8200800000000000000
-      internalID: 183833955000803451
+      spriteID: d04137779fb458600800000000000000
+      internalID: 469865270953055245
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ride_0: 183833955000803451
+      "\uB3C4\uB9C8_0": 469865270953055245
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

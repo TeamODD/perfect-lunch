@@ -58,7 +58,16 @@ public class UIManager : MonoBehaviour
             score.index = index;
             Table.gameObject.SetActive(true);
             iscook = true;//현재 재료손질 중이라는 뜻
-            CookFood=Instantiate(foodPrefabs[index],Cook.transform);
+            //CookFood =Instantiate(foodPrefabs[index],Cook.transform);
+            CookFood = Instantiate(foodPrefabs[index]);
+            CookFood.transform.position = Cook.transform.position;
+            CookFood.name = "CookFood";
+            SpriteRenderer sr = CookFood.GetComponent<SpriteRenderer>();
+            if (sr != null)
+            {
+                sr.sortingLayerName = "Foreground"; // UI보다 앞에 나오도록
+                sr.sortingOrder = 10;
+            }
         }    
     }
     public void Shuffle()//마지막 인덱스가 처음으로 나오지 않게 손님순서 셔플
