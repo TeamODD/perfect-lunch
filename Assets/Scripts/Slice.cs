@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+
 using UnityEngine;
 
 public class Slice : MonoBehaviour
@@ -30,7 +31,7 @@ public class Slice : MonoBehaviour
             }
         }
 
-        if (Input.GetMouseButtonDown(0) && iscook==true)
+        if (Input.GetMouseButtonDown(0) && iscook == true)
         {
             SlicePosition();
         }
@@ -39,7 +40,9 @@ public class Slice : MonoBehaviour
     void AddSliceList(GameObject obj)
     {
         if (obj.GetComponent<BoxCollider2D>() == null)
+        {
             obj.AddComponent<BoxCollider2D>();
+        }
 
         SpriteRenderer sr = obj.GetComponent<SpriteRenderer>();
         BoxCollider2D col = obj.GetComponent<BoxCollider2D>();
@@ -47,7 +50,9 @@ public class Slice : MonoBehaviour
         col.offset = sr.sprite.bounds.center;
 
         if (!sliceList.Contains(obj))
+        {
             sliceList.Add(obj);
+        }
     }
 
     void SlicePosition()
@@ -66,7 +71,10 @@ public class Slice : MonoBehaviour
                 break;
             }
         }
-        Slicing(slicePart, worldPos);
+        if (slicePart != null)
+        {
+            Slicing(slicePart, worldPos);
+        }
     }
 
     void Slicing(GameObject sliceObj, Vector3 worldClick)
@@ -76,11 +84,11 @@ public class Slice : MonoBehaviour
 
         // textureRect 기준으로 Texture2D 생성
         Rect texRect = sprite.textureRect;
-        int texWidth = (int)texRect.width;
-        int texHeight = (int)texRect.height;
+        int texWidth = (int) texRect.width;
+        int texHeight = (int) texRect.height;
 
         Texture2D tex = new Texture2D(texWidth, texHeight, TextureFormat.RGBA32, false);
-        Color[] pixels = sprite.texture.GetPixels((int)texRect.x, (int)texRect.y, texWidth, texHeight);
+        Color[] pixels = sprite.texture.GetPixels((int) texRect.x, (int) texRect.y, texWidth, texHeight);
         tex.SetPixels(pixels);
         tex.Apply();
 
@@ -91,7 +99,10 @@ public class Slice : MonoBehaviour
 
         int leftWidth = Mathf.Clamp(Mathf.RoundToInt(pivot.x + localClick.x * ppu), 1, tex.width - 1);
         int rightWidth = tex.width - leftWidth;
-        if (leftWidth <= 0 || rightWidth <= 0) return;
+        if (leftWidth <= 0 || rightWidth <= 0)
+        {
+            return;
+        }
 
         float ImagePosition = worldClick.x - originalLeftEdge.x;
         float rightPercent = Mathf.Clamp01(1f - (ImagePosition / originalImageWidth)) * 100f;
