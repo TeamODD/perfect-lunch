@@ -13,19 +13,19 @@ public class UIManager : MonoBehaviour
 
     public void MovePlusX(GameObject obj)
     {
-         obj.transform.DOLocalMoveX(-220, 2.0f);
+         obj.transform.DOLocalMoveX(-220, 0.4f);
     }
     public void MovePlusX2(GameObject obj)
     {        
-         obj.transform.DOLocalMoveX(1620, 2.0f);
+         obj.transform.DOLocalMoveX(1620, 0.4f);
     }
     public void MoveMinusX(GameObject obj)
     {      
-        obj.transform.DOLocalMoveX(-1610, 2.0f);
+        obj.transform.DOLocalMoveX(-1610, 0.4f);
     }
     public void MoveMinusX2(GameObject obj)
     {
-        obj.transform.DOLocalMoveX(220, 2.0f);
+        obj.transform.DOLocalMoveX(220, 0.4f);
     }
     public void SelectFood(int index)//재료 선택하면 실행하는 함수
     { 
