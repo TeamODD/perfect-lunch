@@ -35,7 +35,8 @@ public class UIManager : MonoBehaviour
     }
     public void MovePlusX(GameObject obj)
     {
-         obj.transform.DOLocalMoveX(-220, 0.4f);
+        if(!iscook)
+            obj.transform.DOLocalMoveX(-220, 0.4f);
     }
     public void MovePlusX2(GameObject obj)
     {        
@@ -47,7 +48,8 @@ public class UIManager : MonoBehaviour
     }
     public void MoveMinusX2(GameObject obj)
     {
-        obj.transform.DOLocalMoveX(220, 0.4f);
+        if (!iscook)
+            obj.transform.DOLocalMoveX(220, 0.4f);
     }
     public void SelectFood(int index)//재료 선택하면 실행하는 함수
     { 
@@ -104,7 +106,7 @@ public class UIManager : MonoBehaviour
     }
     IEnumerator CustomerIn()
     {
-        customers[randomList[cindex]].transform.DOLocalMoveY(72, 1f).SetEase(Ease.OutBack);
+        customers[randomList[cindex]].transform.DOLocalMoveY(-100, 1f).SetEase(Ease.OutBack);
         yield return new WaitForSeconds(1);
         Dialogue.SetActive(true);
         DialogueText.text = "안녕하세요";
@@ -115,7 +117,7 @@ public class UIManager : MonoBehaviour
     {
         cindex++;
         cnt++;
-        customers[randomList[cindex]].transform.DOLocalMoveY(-667, 1f).SetEase(Ease.OutBack);
+        customers[randomList[cindex]].transform.DOLocalMoveY(-785, 1f).SetEase(Ease.OutBack);
         yield return new WaitForSeconds(1);
         Dialogue.SetActive(true);
         DialogueText.text = "감사합니다";
