@@ -23,8 +23,8 @@ public class UIManager : MonoBehaviour
     [SerializeField] List<GameObject> customers;
     [SerializeField] List<GameObject> foodPrefabs;
     [SerializeField] List<int> randomList;//손님 인덱스를 랜덤으로 저장한 리스트
-    [SerializeField] int cnt=0;//손님 수
-    [SerializeField] TextMeshProUGUI CountText;
+    public int cnt=0;//손님 수
+    public TextMeshProUGUI CountText;
     [SerializeField] TextMeshProUGUI DialogueText;
     public bool iscook = false;//지금 재료손질 중인지
     public int cindex = 0;//cnt랑 다르게 0~3까지 하고 다시 0부터 시작

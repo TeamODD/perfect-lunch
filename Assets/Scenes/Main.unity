@@ -5655,6 +5655,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 922426705}
   m_CullTransparentMesh: 1
+--- !u!1 &926736895
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 926736896}
+  - component: {fileID: 926736898}
+  - component: {fileID: 926736897}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &926736896
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 926736895}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1793764734}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &926736897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 926736895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &926736898
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 926736895}
+  m_CullTransparentMesh: 1
 --- !u!1 &951497382
 GameObject:
   m_ObjectHideFlags: 0
@@ -10294,6 +10369,7 @@ RectTransform:
   - {fileID: 764342640}
   - {fileID: 626098023}
   - {fileID: 954766448}
+  - {fileID: 926736896}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -10844,7 +10920,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b76b0bc938261e94f8b003dd8007a9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uimanager: {fileID: 1913653756}
+  uimanager: {fileID: 0}
   FoodDB:
   - {fileID: 11400000, guid: f81925635e30f6941a1a7f101fe60b62, type: 2}
   - {fileID: 11400000, guid: 6f570a4d1a8359c44b8e732b00c03a5b, type: 2}
@@ -10861,26 +10937,14 @@ MonoBehaviour:
   fat: 0
   score: 0
   finalScore: 0
-  scoreText:
-  - {fileID: 605469040}
-  - {fileID: 1091604387}
-  - {fileID: 1234555404}
-  - {fileID: 921105424}
-  - {fileID: 328129970}
-  - {fileID: 910678338}
-  - {fileID: 594250998}
-  - {fileID: 1681403563}
+  scoreText: []
   finalScoreText: {fileID: 1208782673}
-  preferenceList:
-  - x
-  - x
-  - Meats
-  - Fruits
-  ScoreBoard: {fileID: 626098022}
-  boardButton: {fileID: 1819283872}
+  preferenceList: []
+  ScoreBoard: {fileID: 0}
+  boardButton: {fileID: 0}
   index: 0
-  nutrientScore: 600
-  preferScore: 700
+  nutrientScore: 0
+  preferScore: 0
 --- !u!4 &1913653754
 Transform:
   m_ObjectHideFlags: 0
@@ -10909,7 +10973,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text_Timer: {fileID: 257119442}
-  score: {fileID: 1913653753}
+  score: {fileID: 0}
   limitTime: 90
   gameStart: 0
 --- !u!114 &1913653756
@@ -10929,32 +10993,18 @@ MonoBehaviour:
   Fruits: {fileID: 502645707}
   Dairy: {fileID: 505868779}
   Table: {fileID: 215613412}
-  Tutorial: {fileID: 1788279560}
-  Dialogue: {fileID: 1794982173}
-  Cook: {fileID: 764342639}
+  Tutorial: {fileID: 0}
+  Dialogue: {fileID: 0}
+  Cook: {fileID: 0}
   CookFood: {fileID: 0}
   score: {fileID: 1913653753}
-  timer: {fileID: 1913653755}
-  customers:
-  - {fileID: 1637330562}
-  - {fileID: 1201246644}
-  - {fileID: 346883156}
-  - {fileID: 186992115}
-  foodPrefabs:
-  - {fileID: 8289334905845085651, guid: 137dc47c7d415884c93801f2bbdf153c, type: 3}
-  - {fileID: 5312029568293498471, guid: 3ff08fd853fe9e742a90e3ff08b8da24, type: 3}
-  - {fileID: 4904813791616615418, guid: b67ae46cb1ccafc4da57dbfe4334ccb8, type: 3}
-  - {fileID: 8304899487296168859, guid: a7be3e52bb725d74e8113397f35458e4, type: 3}
-  - {fileID: 3297464889835714096, guid: fc47034257987c949ae7069f098dfec1, type: 3}
-  - {fileID: 6153106565074638308, guid: ef7e4926313c05a4da33baab2a200b84, type: 3}
-  - {fileID: 8847562367151048105, guid: 37790a255675b8f43a0967558c52ded5, type: 3}
-  - {fileID: 7844993095722139460, guid: 0ba6d1ff602b880458bb732be6332f6b, type: 3}
-  - {fileID: 5317595480650943119, guid: 358db92fb72365e4594a50c325cb6a1e, type: 3}
-  - {fileID: 8225540753367941764, guid: b002b21004bf6ae44a7439c4fdf9cd87, type: 3}
-  randomList: 00000000010000000200000003000000
-  cnt: 5
-  CountText: {fileID: 2141901613}
-  DialogueText: {fileID: 1702803475}
+  timer: {fileID: 0}
+  customers: []
+  foodPrefabs: []
+  randomList: 
+  cnt: 0
+  CountText: {fileID: 0}
+  DialogueText: {fileID: 0}
   iscook: 0
   cindex: 0
 --- !u!1 &1939843994
