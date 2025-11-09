@@ -21,6 +21,8 @@ public class Score : MonoBehaviour
     public List<string> preferenceList;//손님이 어떤 재료를 선호하는지 리스트화    
     [SerializeField] GameObject ScoreBoard;
     [SerializeField] GameObject boardButton;
+    [SerializeField] AudioSource click;
+    [SerializeField] AudioSource finish;//찐최종 점수 나올때
     int preferencePlus=0;//선호도로 얼마나 보너스를 받는지
     public int index;//현재 조리하는 음식의 인덱스(UI매니저에서 할당)
     public int nutrientScore = 0;
@@ -144,6 +146,7 @@ public class Score : MonoBehaviour
         yield return new WaitForSeconds(1);
         scoreText[6].gameObject.SetActive(true);
         yield return new WaitForSeconds(1);
+        finish.Play();
         scoreText[7].gameObject.SetActive(true);
         scoreText[7].text = ""+(nutrientScore+preferScore);
         yield return new WaitForSeconds(1);
