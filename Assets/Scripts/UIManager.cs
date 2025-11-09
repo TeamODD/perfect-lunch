@@ -29,6 +29,7 @@ public class UIManager : MonoBehaviour
     public bool iscook = false;//지금 재료손질 중인지
     public int cindex = 0;//cnt랑 다르게 0~3까지 하고 다시 0부터 시작
     public bool isfirst = true;//이게 첫 번째 재료인지
+    public int foodcnt = 0;//재료 몇 개 넣었는지
     private void Start()
     {
         isfirst = true;
@@ -57,6 +58,7 @@ public class UIManager : MonoBehaviour
     }
     public void SelectFood(int index)//재료 선택하면 실행하는 함수
     {
+            
             score.index = index;
             Table.gameObject.SetActive(true);
             

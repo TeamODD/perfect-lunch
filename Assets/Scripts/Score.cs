@@ -30,6 +30,7 @@ public class Score : MonoBehaviour
         Debug.Log("다음 음식 선택");
         if (!uimanager.isfirst)
         {
+            uimanager.foodcnt++;
             Debug.Log("계산식실행");
             float amount = (100 - cook.min) * 0.01f;
             Debug.Log("amount:" + amount);
@@ -58,6 +59,8 @@ public class Score : MonoBehaviour
     }
     public void Scoring()
     {
+        uimanager.isfirst=false;
+        AddFood();//음식 제출시 현재 손질중인 재료도 넣게
         for (int i = cook.sliceList.Count - 1; i >= 0; i--)
         {
             if (cook.sliceList[i] != null)
@@ -68,14 +71,25 @@ public class Score : MonoBehaviour
         cook.sliceList.Clear();
         cook.min = 100;
         float total = carbohydrate + protein + fat;
-        carbohydrate = carbohydrate / total * 100f;//백분위로 %표시
-        protein= protein / total * 100f;
-        fat= fat / total * 100f;
+        if(total!=0)//제로디바인 방지
+        {
+            carbohydrate = carbohydrate / total * 100f;//백분위로 %표시
+            protein = protein / total * 100f;
+            fat = fat / total * 100f;
+        }    
         Debug.Log("탄단지2" + carbohydrate + "/" + protein + "/" + fat);
         score = 1000 //탄수 55% 단백질 20% 지방 25%에서 벗어날수록 1%당 -5점
-            - Mathf.Abs(55 - carbohydrate) * 5
-            - Mathf.Abs(20 - protein) * 5
-            - Mathf.Abs(25 - fat) * 5;
+            - Mathf.Abs(55 - carbohydrate) * 10
+            - Mathf.Abs(20 - protein) * 10
+            - Mathf.Abs(25 - fat) * 10;
+        if (uimanager.foodcnt == 1)
+        {
+            score -= 500;
+        }
+        else if (uimanager.foodcnt == 2)
+        {
+            score -= 250;
+        } 
         if (score < 0) score = 0;
         nutrientScore += (int)score;
         preferScore += preferencePlus;
@@ -86,6 +100,7 @@ public class Score : MonoBehaviour
         preferencePlus = 0;
         finalScore += (int)score;
         finalScoreText.text = ""+finalScore;
+        uimanager.foodcnt = 0;
         StartCoroutine("ShowScoreCo");        
     }
     public void GameEnd()
