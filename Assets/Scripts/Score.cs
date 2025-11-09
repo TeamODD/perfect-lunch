@@ -116,7 +116,7 @@ public class Score : MonoBehaviour
         customerScoreText.gameObject.SetActive(true);
         for (int i = 0; i <= (int)score; i++)
         {
-            yield return new WaitForSeconds(0.001f);
+            yield return new WaitForSeconds(0.0005f);
             customerScoreText.text = "+" + i;
         }
         yield return new WaitForSeconds(1f);
@@ -126,6 +126,7 @@ public class Score : MonoBehaviour
     IEnumerator GameEndCo()
     {
         int cnt = uimanager.cnt + 1;
+        customerScoreText.gameObject.SetActive(false);
         uimanager.CountText.gameObject.SetActive(true);
         uimanager.CountText.text = "Finish!";
         yield return new WaitForSeconds(2);
