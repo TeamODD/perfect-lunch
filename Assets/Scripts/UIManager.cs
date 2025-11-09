@@ -35,7 +35,7 @@ public class UIManager : MonoBehaviour
     public int cindex = 0;//cnt랑 다르게 0~3까지 하고 다시 0부터 시작
     public bool isfirst = true;//이게 첫 번째 재료인지
     public int foodcnt = 0;//재료 몇 개 넣었는지
-    bool ispeople=false;
+    public bool ispeople=false;
     private void Start()
     {
         isfirst = true;
@@ -45,36 +45,47 @@ public class UIManager : MonoBehaviour
     }
     public void MovePlusX(GameObject obj)
     {
-        if (timer.gameStart)
+        if (ispeople)
         {
-            drawer.Play();
-            obj.transform.DOLocalMoveX(-310, 0.4f);
+            if (timer.gameStart)
+            {
+                drawer.Play();
+                obj.transform.DOLocalMoveX(-310, 0.4f);
+            }
         }
-        
     }
     public void MovePlusX2(GameObject obj)
     {
-        if (timer.gameStart)
+        if (ispeople)
         {
-            drawer.Play();
-            obj.transform.DOLocalMoveX(1580, 0.4f);
-        }            
+            if (timer.gameStart)
+            {
+                drawer.Play();
+                obj.transform.DOLocalMoveX(1580, 0.4f);
+            }
+        }
     }
     public void MoveMinusX(GameObject obj)
     {
-        if (timer.gameStart)
+        if (ispeople)
         {
-            drawer.Play();
-            obj.transform.DOLocalMoveX(-1580, 0.4f);
-        }          
+            if (timer.gameStart)
+            {
+                drawer.Play();
+                obj.transform.DOLocalMoveX(-1580, 0.4f);
+            }
+        }
     }
     public void MoveMinusX2(GameObject obj)
     {
-        if (timer.gameStart)
+        if (ispeople)
         {
-            drawer.Play();
-            obj.transform.DOLocalMoveX(310, 0.4f);
-        }         
+            if (timer.gameStart)
+            {
+                drawer.Play();
+                obj.transform.DOLocalMoveX(310, 0.4f);
+            }
+        }
     }
     public void SelectFood(int index)//재료 선택하면 실행하는 함수
     {
@@ -143,12 +154,20 @@ public class UIManager : MonoBehaviour
         customers[randomList[cindex]].transform.DOLocalMoveY(-100, 1f).SetEase(Ease.OutBack);
         yield return new WaitForSeconds(1);
         Dialogue.SetActive(true);
-        DialogueText.text = "안녕하세요";
+        if (randomList[cindex] == 0)
+            DialogueText.text = "음식이라면, 뭐가 많이 들어가야 하는지 알지?";
+        else if (randomList[cindex] == 1)
+            DialogueText.text = "트레이너 선생님께서... 일단 살부터 찌우는 게 좋겠다고 하셨는데...";
+        else if (randomList[cindex] == 2)
+            DialogueText.text = "아무거나 주세요. 근데 오늘은 든든한 음식이 먹고 싶네요.";
+        else
+            DialogueText.text = "많이 주세요~! 신선한 걸로요~!";
         yield return new WaitForSeconds(1);
         Dialogue.SetActive(false);
+        ispeople = true;
     }
     IEnumerator CustomerOut()
-    {              
+    {   
         yield return new WaitForSeconds(1);
         Dialogue.SetActive(true);
         DialogueText.text = "감사합니다";
