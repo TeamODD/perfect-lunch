@@ -428,7 +428,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 485, y: 10}
-  m_SizeDelta: {x: 160, y: 160}
+  m_SizeDelta: {x: 160, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &44849155
 MonoBehaviour:
@@ -481,7 +481,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 10
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -518,8 +518,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -6118903533304650441, guid: f9e798f51915ad44688f4adba5239137, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -4821,7 +4821,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &711286836
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11699,7 +11699,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: "\uCE58\uCEE4\uB9AC"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ce7f129c0a4ef2f40aaa9ae7fba7539c, type: 2}
   m_sharedMaterial: {fileID: 5605492430593886916, guid: ce7f129c0a4ef2f40aaa9ae7fba7539c, type: 2}
@@ -11708,7 +11708,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
+    rgba: 4278203520
   m_fontColor: {r: 0.5019608, g: 0.20392157, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -11967,6 +11967,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2e0ac92941bbc7c499ca4851f70d0b0b, type: 2}
   - {fileID: 11400000, guid: 337ec8d042498eb4bb287e6b74f50eaa, type: 2}
   - {fileID: 11400000, guid: 30c6ca1609b842349aecfb27a24fcd48, type: 2}
+  - {fileID: 11400000, guid: 84be49eb5dfa229489ee54cb2570e5ca, type: 2}
   carbohydrate: 0
   protein: 0
   fat: 0
@@ -11984,10 +11985,10 @@ MonoBehaviour:
   finalScoreText: {fileID: 1414797991}
   customerScoreText: {fileID: 1914364552}
   preferenceList:
-  - Meats
-  - Fruits
-  - 
-  - 
+  - meat
+  - meat
+  - dairy
+  - vegetable
   ScoreBoard: {fileID: 660060644}
   boardButton: {fileID: 238399788}
   index: 0
@@ -12063,6 +12064,7 @@ MonoBehaviour:
   - {fileID: 7844993095722139460, guid: 0ba6d1ff602b880458bb732be6332f6b, type: 3}
   - {fileID: 5317595480650943119, guid: 358db92fb72365e4594a50c325cb6a1e, type: 3}
   - {fileID: 8225540753367941764, guid: b002b21004bf6ae44a7439c4fdf9cd87, type: 3}
+  - {fileID: 6642771462377404319, guid: ca5486c35460dc847b3f1618da6ebc2e, type: 3}
   randomList: 00000000010000000200000003000000
   cnt: 0
   CountText: {fileID: 812086276}
