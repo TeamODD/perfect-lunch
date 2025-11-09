@@ -18,7 +18,7 @@ public class Setting : MonoBehaviour
     }
     public void ExitGame()
     {
-        Application.Quit();
+        SceneManager.LoadScene("Start");
     }
     public void Restart()
     {
