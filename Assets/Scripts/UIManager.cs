@@ -155,13 +155,13 @@ public class UIManager : MonoBehaviour
         yield return new WaitForSeconds(1);
         Dialogue.SetActive(true);
         if (randomList[cindex] == 0)
-            DialogueText.text = "음식이라면, 뭐가 많이 들어가야 하는지 알지?";
+            DialogueText.text = "음식이라면,\n뭐가 많이 들어가야\n하는지 알지?";
         else if (randomList[cindex] == 1)
             DialogueText.text = "트레이너 선생님께서... 일단 살부터 찌우는 게 좋겠다고 하셨는데...";
         else if (randomList[cindex] == 2)
-            DialogueText.text = "아무거나 주세요. 근데 오늘은 든든한 음식이 먹고 싶네요.";
+            DialogueText.text = "아무거나 주세요.\n근데 오늘은 든든한\n음식이 먹고 싶네요.";
         else
-            DialogueText.text = "많이 주세요~! 신선한 걸로요~!";
+            DialogueText.text = "많이 주세요~!\n신선한 걸로요~!";
         yield return new WaitForSeconds(1);
         Dialogue.SetActive(false);
         ispeople = true;

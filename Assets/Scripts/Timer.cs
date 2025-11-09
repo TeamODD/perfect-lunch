@@ -41,6 +41,7 @@ public class Timer : MonoBehaviour
             }
             if(limitTime<=0)
             {
+                text_Timer.text = "00 : 00";
                 score.GameEnd();
                 gameStart = false;
             }
