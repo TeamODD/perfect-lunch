@@ -11,6 +11,7 @@ public class Slice : MonoBehaviour
     float originalImageWidth;// 전체 길이
     Vector3 originalLeftEdge;// 왼모퉁이
     public UIManager GameManager;
+    [SerializeField] AudioSource cut;
     void Update()
     {
         if (targetSpriteRenderer == null && GameManager.iscook)
@@ -77,6 +78,7 @@ public class Slice : MonoBehaviour
 
     void Slicing(GameObject sliceObj, Vector3 worldClick)
     {
+        cut.Play();
         SpriteRenderer sr = sliceObj.GetComponent<SpriteRenderer>();
         Sprite sprite = sr.sprite;
 

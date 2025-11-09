@@ -26,6 +26,11 @@ public class UIManager : MonoBehaviour
     public int cnt=0;//손님 수
     public TextMeshProUGUI CountText;
     [SerializeField] TextMeshProUGUI DialogueText;
+    [SerializeField] AudioSource cut;
+    [SerializeField] AudioSource drawer;
+    [SerializeField] AudioSource bell;
+    [SerializeField] AudioSource click;
+    [SerializeField] AudioSource finish;//찐최종 점수 나올때
     public bool iscook = false;//지금 재료손질 중인지
     public int cindex = 0;//cnt랑 다르게 0~3까지 하고 다시 0부터 시작
     public bool isfirst = true;//이게 첫 번째 재료인지
@@ -36,30 +41,44 @@ public class UIManager : MonoBehaviour
         isfirst = true;
         Shuffle();
         CustomerIn();
+     
     }
     public void MovePlusX(GameObject obj)
     {
-        if(timer.gameStart)
-        obj.transform.DOLocalMoveX(-220, 0.4f);
+        if (timer.gameStart)
+        {
+            drawer.Play();
+            obj.transform.DOLocalMoveX(-310, 0.4f);
+        }
+        
     }
     public void MovePlusX2(GameObject obj)
     {
         if (timer.gameStart)
-            obj.transform.DOLocalMoveX(1620, 0.4f);
+        {
+            drawer.Play();
+            obj.transform.DOLocalMoveX(1580, 0.4f);
+        }            
     }
     public void MoveMinusX(GameObject obj)
     {
         if (timer.gameStart)
-            obj.transform.DOLocalMoveX(-1610, 0.4f);
+        {
+            drawer.Play();
+            obj.transform.DOLocalMoveX(-1580, 0.4f);
+        }          
     }
     public void MoveMinusX2(GameObject obj)
     {
         if (timer.gameStart)
-            obj.transform.DOLocalMoveX(220, 0.4f);
+        {
+            drawer.Play();
+            obj.transform.DOLocalMoveX(310, 0.4f);
+        }         
     }
     public void SelectFood(int index)//재료 선택하면 실행하는 함수
     {
-            
+            click.Play();
             score.index = index;
             Table.gameObject.SetActive(true);
             
@@ -120,6 +139,7 @@ public class UIManager : MonoBehaviour
     }
     IEnumerator CustomerIn()
     {
+        bell.Play();
         customers[randomList[cindex]].transform.DOLocalMoveY(-100, 1f).SetEase(Ease.OutBack);
         yield return new WaitForSeconds(1);
         Dialogue.SetActive(true);
