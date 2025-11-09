@@ -5983,7 +5983,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetSpriteRenderer: {fileID: 0}
-  power: 0.4
+  power: 1
   min: 100
   GameManager: {fileID: 1913653756}
 --- !u!1 &1077699998
