@@ -3,12 +3,15 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class GameStart : MonoBehaviour
 {
+    public AudioSource AudioSource;
     public void StartButton()
     {
+        AudioSource.Play();
         SceneManager.LoadScene("Main");
     }
     public void QuitButton()
     {
+        AudioSource.Play();
         #if UNITY_EDITOR
             EditorApplication.isPlaying = false;
         #else
