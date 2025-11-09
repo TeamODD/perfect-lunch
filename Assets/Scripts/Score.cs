@@ -111,6 +111,7 @@ public class Score : MonoBehaviour
     }
     IEnumerator ShowScoreCo()
     {
+        uimanager.ispeople = false;
         uimanager.Table.SetActive(false);
         customerScoreText.gameObject.SetActive(true);
         for (int i = 0; i <= (int)score; i++)
