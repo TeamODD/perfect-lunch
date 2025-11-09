@@ -1,8 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using DG.Tweening;
 using NUnit.Framework;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
@@ -10,37 +13,97 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject Grains;
     [SerializeField] GameObject Fruits;
     [SerializeField] GameObject Dairy;
-    [SerializeField] GameObject Table;
+    public GameObject Table;
+    [SerializeField] GameObject Tutorial;
+    [SerializeField] GameObject Dialogue;
+    [SerializeField] GameObject Cook;
+    [SerializeField] GameObject CookFood;//삭제하기 위해 임시저장
     [SerializeField] Score score;
+    [SerializeField] Timer timer;
     [SerializeField] List<GameObject> customers;
+    [SerializeField] List<GameObject> foodPrefabs;
     [SerializeField] List<int> randomList;//손님 인덱스를 랜덤으로 저장한 리스트
-    [SerializeField] int cnt=0;//손님 수
+    public int cnt=0;//손님 수
+    public TextMeshProUGUI CountText;
+    [SerializeField] TextMeshProUGUI DialogueText;
+    [SerializeField] AudioSource cut;
+    [SerializeField] AudioSource drawer;
+    [SerializeField] AudioSource bell;
+    [SerializeField] AudioSource click;
+    [SerializeField] AudioSource finish;//찐최종 점수 나올때
+    public bool iscook = false;//지금 재료손질 중인지
     public int cindex = 0;//cnt랑 다르게 0~3까지 하고 다시 0부터 시작
+    public bool isfirst = true;//이게 첫 번째 재료인지
+    public int foodcnt = 0;//재료 몇 개 넣었는지
+    public bool ispeople=false;
     private void Start()
     {
+        isfirst = true;
         Shuffle();
         CustomerIn();
+     
     }
     public void MovePlusX(GameObject obj)
     {
-         obj.transform.DOLocalMoveX(-220, 0.4f);
+        if (ispeople)
+        {
+            if (timer.gameStart)
+            {
+                drawer.Play();
+                obj.transform.DOLocalMoveX(-310, 0.4f);
+            }
+        }
     }
     public void MovePlusX2(GameObject obj)
-    {        
-         obj.transform.DOLocalMoveX(1620, 0.4f);
+    {
+        if (ispeople)
+        {
+            if (timer.gameStart)
+            {
+                drawer.Play();
+                obj.transform.DOLocalMoveX(1580, 0.4f);
+            }
+        }
     }
     public void MoveMinusX(GameObject obj)
-    {      
-        obj.transform.DOLocalMoveX(-1610, 0.4f);
+    {
+        if (ispeople)
+        {
+            if (timer.gameStart)
+            {
+                drawer.Play();
+                obj.transform.DOLocalMoveX(-1580, 0.4f);
+            }
+        }
     }
     public void MoveMinusX2(GameObject obj)
     {
-        obj.transform.DOLocalMoveX(220, 0.4f);
+        if (ispeople)
+        {
+            if (timer.gameStart)
+            {
+                drawer.Play();
+                obj.transform.DOLocalMoveX(310, 0.4f);
+            }
+        }
     }
     public void SelectFood(int index)//재료 선택하면 실행하는 함수
-    { 
-        score.index = index;
-        Table.gameObject.SetActive(true);
+    {
+            click.Play();
+            score.index = index;
+            Table.gameObject.SetActive(true);
+            
+            iscook = true;//현재 재료손질 중이라는 뜻
+            //CookFood =Instantiate(foodPrefabs[index],Cook.transform);
+            CookFood = Instantiate(foodPrefabs[index]);
+            CookFood.transform.position = Cook.transform.position;
+            CookFood.name = "CookFood";
+            SpriteRenderer sr = CookFood.GetComponent<SpriteRenderer>();
+            if (sr != null)
+            {
+                sr.sortingLayerName = "Foreground"; // UI보다 앞에 나오도록
+                sr.sortingOrder = 10;
+            }
     }
     public void Shuffle()//마지막 인덱스가 처음으로 나오지 않게 손님순서 셔플
     {
@@ -60,14 +123,73 @@ public class UIManager : MonoBehaviour
             }
         }       
     }
-    public void CustomerIn()
+    public void CustomerOutCo()
     {
-        customers[randomList[cindex]].transform.DOLocalMoveY(72, 1f).SetEase(Ease.OutBack);
+        StartCoroutine("CustomerOut");
     }
-    public void CustomerOut()
+    public void Exittuto()
     {
-        customers[randomList[cindex]].transform.DOLocalMoveY(-667, 1f).SetEase(Ease.OutBack);
+        Tutorial.gameObject.SetActive(false);
+        StartCoroutine("GameStart");
+    }
+    
+    IEnumerator GameStart()
+    {       
+        CountText.gameObject.SetActive(true);
+        CountText.text = "3";
+        yield return new WaitForSeconds(1);
+        CountText.text = "2";
+        yield return new WaitForSeconds(1);
+        CountText.text = "1";
+        yield return new WaitForSeconds(1);
+        CountText.text = "Start!";
+        yield return new WaitForSeconds(1);
+        CountText.gameObject.SetActive(false);
+        timer.gameStart = true;
+        StartCoroutine("CustomerIn");
+    }
+    IEnumerator CustomerIn()
+    {
+        bell.Play();
+        customers[randomList[cindex]].transform.DOLocalMoveY(-100, 1f).SetEase(Ease.OutBack);
+        yield return new WaitForSeconds(1);
+        Dialogue.SetActive(true);
+        if (randomList[cindex] == 0)
+            DialogueText.text = "음식이라면,\n뭐가 많이 들어가야\n하는지 알지?";
+        else if (randomList[cindex] == 1)
+            DialogueText.text = "트레이너 선생님께서... 일단 살부터 찌우는 게 좋겠다고 하셨는데...";
+        else if (randomList[cindex] == 2)
+            DialogueText.text = "아무거나 주세요.\n근데 오늘은 든든한\n음식이 먹고 싶네요.";
+        else
+            DialogueText.text = "많이 주세요~!\n신선한 걸로요~!";
+        yield return new WaitForSeconds(1);
+        Dialogue.SetActive(false);
+        ispeople = true;
+    }
+    IEnumerator CustomerOut()
+    {   
+        yield return new WaitForSeconds(1);
+        Dialogue.SetActive(true);
+        if (randomList[cindex] == 0)
+            DialogueText.text = "맛있어 보이네!";
+        else if (randomList[cindex] == 1)
+            DialogueText.text = "감사합니다.";
+        else if (randomList[cindex] == 2)
+            DialogueText.text = "괜찮네요. 맛있어요.";
+        else
+            DialogueText.text = "오~신기한 음식이네요~?";
+        yield return new WaitForSeconds(1);
+        Dialogue.SetActive(false);
+        customers[randomList[cindex]].transform.DOLocalMoveY(-785, 1f).SetEase(Ease.OutBack);
         cindex++;
+        if(cindex>=4)
+        {
+            cindex = 0;
+            Shuffle();
+        }            
         cnt++;
+        yield return new WaitForSeconds(1);
+        isfirst = true;
+        StartCoroutine("CustomerIn");
     }
 }

@@ -7,6 +7,7 @@ public class Timer : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public TextMeshProUGUI text_Timer;
+    public Score score;
     public float limitTime;//초 단위로 입력받음
     public bool gameStart;
 
@@ -15,9 +16,9 @@ public class Timer : MonoBehaviour
         if(gameStart)
         {
             limitTime -= Time.deltaTime;
-            if(Mathf.Floor(limitTime / 60)<10)
+            if(Mathf.Floor(limitTime / 60)<10)//분이 1자리이면
             {
-                if(Mathf.Round(limitTime) % 60<10)
+                if(Mathf.Round(limitTime) % 60<10)//초가 1자리라면
                 {
                     text_Timer.text = "0" + Mathf.Floor(limitTime / 60) + " : 0" + Mathf.Round(limitTime) % 60;
                 }
@@ -38,7 +39,12 @@ public class Timer : MonoBehaviour
                     text_Timer.text = "" + Mathf.Floor(limitTime / 60) + " : " + Mathf.Round(limitTime) % 60;
                 }
             }
-                
+            if(limitTime<=0)
+            {
+                text_Timer.text = "00 : 00";
+                score.GameEnd();
+                gameStart = false;
+            }
         }
     }
 }
