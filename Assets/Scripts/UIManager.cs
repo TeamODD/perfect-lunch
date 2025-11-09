@@ -135,6 +135,7 @@ public class UIManager : MonoBehaviour
         Dialogue.SetActive(false);
         customers[randomList[cindex]].transform.DOLocalMoveY(-785, 1f).SetEase(Ease.OutBack);
         cindex++;
+        if(cindex>=4)cindex=0;
         cnt++;
         yield return new WaitForSeconds(1);
         isfirst = true;
