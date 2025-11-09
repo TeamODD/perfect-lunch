@@ -17,38 +17,66 @@ public class Score : MonoBehaviour
     [SerializeField] int finalScore=0;
     [SerializeField] List<TextMeshProUGUI> scoreText;
     [SerializeField] TextMeshProUGUI finalScoreText;
+    [SerializeField] TextMeshProUGUI customerScoreText;
     [SerializeField] List<string> preferenceList;//손님이 어떤 재료를 선호하는지 리스트화    
     [SerializeField] GameObject ScoreBoard;
     [SerializeField] GameObject boardButton;
     int preferencePlus=0;//선호도로 얼마나 보너스를 받는지
     public int index;//현재 조리하는 음식의 인덱스(UI매니저에서 할당)
     public int nutrientScore = 0;
-    public int preferScore = 0;   
-    public void AddFood( )//음식 인덱스와 양을 넣으면 영양소 값 더해짐
+    public int preferScore = 0;
+    public void AddFood()//음식 인덱스와 양을 넣으면 영양소 값 더해짐
     {
-        if (uimanager.iscook)
+        Debug.Log("다음 음식 선택");
+        if (!uimanager.isfirst)
         {
-            float amount = 100 - cook.min;
+            Debug.Log("계산식실행");
+            float amount = (100 - cook.min) * 0.01f;
+            Debug.Log("amount:" + amount);
             carbohydrate += FoodDB[index].carbohydrate * amount;
             protein += FoodDB[index].protein * amount;
             fat += FoodDB[index].fat * amount;
+            Debug.Log("탄단지" + carbohydrate+"/"+protein+"/"+fat);
             if (FoodDB[index].type == preferenceList[uimanager.cindex] && preferencePlus < 500)//손님이 선호하고 선호도 추가점수가 500미만이면
             {
                 preferencePlus += 100;//선호 보너스 +100
             }
-            Debug.Log(fat);
+            for (int i = cook.sliceList.Count - 1; i >= 0; i--)
+            {
+                if (cook.sliceList[i] != null)
+                {
+                    Destroy(cook.sliceList[i]);
+                }
+            }
+            cook.sliceList.Clear();
+            cook.min = 100;
+        }
+        else
+        {
+            uimanager.isfirst = false;
         }
     }
     public void Scoring()
     {
+        for (int i = cook.sliceList.Count - 1; i >= 0; i--)
+        {
+            if (cook.sliceList[i] != null)
+            {
+                Destroy(cook.sliceList[i]);
+            }
+        }
+        cook.sliceList.Clear();
+        cook.min = 100;
         float total = carbohydrate + protein + fat;
-        carbohydrate = carbohydrate / total * 100;//백분위로 %표시
-        protein= protein / total * 100;
-        fat= fat / total * 100;
-        score = 1000 //탄수 55% 단백질 20% 지방 25%에서 벗어날수록 1%당 -50점
-            - Mathf.Abs(55 - carbohydrate) * 50
-            - Mathf.Abs(20 - protein) * 50
-            - Mathf.Abs(25 - fat) * 50;
+        carbohydrate = carbohydrate / total * 100f;//백분위로 %표시
+        protein= protein / total * 100f;
+        fat= fat / total * 100f;
+        Debug.Log("탄단지2" + carbohydrate + "/" + protein + "/" + fat);
+        score = 1000 //탄수 55% 단백질 20% 지방 25%에서 벗어날수록 1%당 -5점
+            - Mathf.Abs(55 - carbohydrate) * 5
+            - Mathf.Abs(20 - protein) * 5
+            - Mathf.Abs(25 - fat) * 5;
+        if (score < 0) score = 0;
         nutrientScore += (int)score;
         preferScore += preferencePlus;
         score += preferencePlus;
@@ -58,14 +86,25 @@ public class Score : MonoBehaviour
         preferencePlus = 0;
         finalScore += (int)score;
         finalScoreText.text = ""+finalScore;
-
-        uimanager.CustomerOutCo();
+        StartCoroutine("ShowScoreCo");        
     }
     public void GameEnd()
     {
         StartCoroutine("GameEndCo");
     }
-
+    IEnumerator ShowScoreCo()
+    {
+        uimanager.Table.SetActive(false);
+        customerScoreText.gameObject.SetActive(true);
+        for (int i = 0; i <= (int)score; i++)
+        {
+            yield return new WaitForSeconds(0.001f);
+            customerScoreText.text = "+" + i;
+        }
+        yield return new WaitForSeconds(1f);
+        customerScoreText.gameObject.SetActive(false);
+        uimanager.CustomerOutCo();
+    }
     IEnumerator GameEndCo()
     {
         int cnt = uimanager.cnt + 1;
