@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class Score : MonoBehaviour
 {
+    public Slice cook;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     [SerializeField] UIManager uimanager;
     [SerializeField] List<Nutrient> FoodDB;
@@ -23,14 +24,19 @@ public class Score : MonoBehaviour
     public int index;//현재 조리하는 음식의 인덱스(UI매니저에서 할당)
     public int nutrientScore = 0;
     public int preferScore = 0;   
-    public void AddFood(float amount)//음식 인덱스와 양을 넣으면 영양소 값 더해짐
+    public void AddFood( )//음식 인덱스와 양을 넣으면 영양소 값 더해짐
     {
-        carbohydrate += FoodDB[index].carbohydrate * amount;
-        protein += FoodDB[index].protein * amount;
-        fat += FoodDB[index].fat * amount;
-        if (FoodDB[index].type == preferenceList[uimanager.cindex] && preferencePlus < 500)//손님이 선호하고 선호도 추가점수가 500미만이면
+        if (uimanager.iscook)
         {
-            preferencePlus += 100;//선호 보너스 +100
+            float amount = 100 - cook.min;
+            carbohydrate += FoodDB[index].carbohydrate * amount;
+            protein += FoodDB[index].protein * amount;
+            fat += FoodDB[index].fat * amount;
+            if (FoodDB[index].type == preferenceList[uimanager.cindex] && preferencePlus < 500)//손님이 선호하고 선호도 추가점수가 500미만이면
+            {
+                preferencePlus += 100;//선호 보너스 +100
+            }
+            Debug.Log(fat);
         }
     }
     public void Scoring()

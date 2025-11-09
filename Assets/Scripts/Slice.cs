@@ -7,14 +7,13 @@ public class Slice : MonoBehaviour
     public SpriteRenderer targetSpriteRenderer; // food
     public float power = 0.4f;
     List<GameObject> sliceList = new List<GameObject>();
-    float min = 100f;//최소 오른쪽 비율
+    public float min = 100f;//최소 오른쪽 비율
     float originalImageWidth;// 전체 길이
     Vector3 originalLeftEdge;// 왼모퉁이
-    bool iscook = false;
-
+    public UIManager GameManager;
     void Update()
     {
-        if (targetSpriteRenderer == null && !iscook)
+        if (targetSpriteRenderer == null && GameManager.iscook)
         {
             GameObject cookFood = GameObject.Find("CookFood");
             if (cookFood != null)
@@ -26,12 +25,11 @@ public class Slice : MonoBehaviour
                     AddSliceList(targetSpriteRenderer.gameObject);
                     originalImageWidth = targetSpriteRenderer.bounds.size.x;
                     originalLeftEdge = targetSpriteRenderer.bounds.min;
-                    iscook = true;
                 }
             }
         }
 
-        if (Input.GetMouseButtonDown(0) && iscook == true)
+        if (Input.GetMouseButtonDown(0) && GameManager.iscook)
         {
             SlicePosition();
         }

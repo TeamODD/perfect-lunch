@@ -35,8 +35,7 @@ public class UIManager : MonoBehaviour
     }
     public void MovePlusX(GameObject obj)
     {
-        if(!iscook)
-            obj.transform.DOLocalMoveX(-220, 0.4f);
+        obj.transform.DOLocalMoveX(-220, 0.4f);
     }
     public void MovePlusX2(GameObject obj)
     {        
@@ -48,13 +47,15 @@ public class UIManager : MonoBehaviour
     }
     public void MoveMinusX2(GameObject obj)
     {
-        if (!iscook)
             obj.transform.DOLocalMoveX(220, 0.4f);
     }
     public void SelectFood(int index)//재료 선택하면 실행하는 함수
-    { 
-        if(!iscook)
+    {
+        if (iscook)
         {
+            Destroy(CookFood);
+            iscook = false;
+        }
             score.index = index;
             Table.gameObject.SetActive(true);
             iscook = true;//현재 재료손질 중이라는 뜻
@@ -68,7 +69,6 @@ public class UIManager : MonoBehaviour
                 sr.sortingLayerName = "Foreground"; // UI보다 앞에 나오도록
                 sr.sortingOrder = 10;
             }
-        }    
     }
     public void Shuffle()//마지막 인덱스가 처음으로 나오지 않게 손님순서 셔플
     {
