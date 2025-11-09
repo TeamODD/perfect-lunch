@@ -13,7 +13,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject Grains;
     [SerializeField] GameObject Fruits;
     [SerializeField] GameObject Dairy;
-    [SerializeField] GameObject Table;
+    public GameObject Table;
     [SerializeField] GameObject Tutorial;
     [SerializeField] GameObject Dialogue;
     [SerializeField] GameObject Cook;
@@ -28,36 +28,38 @@ public class UIManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI DialogueText;
     public bool iscook = false;//지금 재료손질 중인지
     public int cindex = 0;//cnt랑 다르게 0~3까지 하고 다시 0부터 시작
+    public bool isfirst = true;//이게 첫 번째 재료인지
     private void Start()
     {
+        isfirst = true;
         Shuffle();
         CustomerIn();
     }
     public void MovePlusX(GameObject obj)
     {
+        if(timer.gameStart)
         obj.transform.DOLocalMoveX(-220, 0.4f);
     }
     public void MovePlusX2(GameObject obj)
-    {        
-         obj.transform.DOLocalMoveX(1620, 0.4f);
+    {
+        if (timer.gameStart)
+            obj.transform.DOLocalMoveX(1620, 0.4f);
     }
     public void MoveMinusX(GameObject obj)
-    {      
-        obj.transform.DOLocalMoveX(-1610, 0.4f);
+    {
+        if (timer.gameStart)
+            obj.transform.DOLocalMoveX(-1610, 0.4f);
     }
     public void MoveMinusX2(GameObject obj)
     {
+        if (timer.gameStart)
             obj.transform.DOLocalMoveX(220, 0.4f);
     }
     public void SelectFood(int index)//재료 선택하면 실행하는 함수
     {
-        if (iscook)
-        {
-            Destroy(CookFood);
-            iscook = false;
-        }
             score.index = index;
             Table.gameObject.SetActive(true);
+            
             iscook = true;//현재 재료손질 중이라는 뜻
             //CookFood =Instantiate(foodPrefabs[index],Cook.transform);
             CookFood = Instantiate(foodPrefabs[index]);
@@ -123,14 +125,17 @@ public class UIManager : MonoBehaviour
         Dialogue.SetActive(false);
     }
     IEnumerator CustomerOut()
-    {
-        cindex++;
-        cnt++;
-        customers[randomList[cindex]].transform.DOLocalMoveY(-785, 1f).SetEase(Ease.OutBack);
+    {              
         yield return new WaitForSeconds(1);
         Dialogue.SetActive(true);
         DialogueText.text = "감사합니다";
         yield return new WaitForSeconds(1);
-        Dialogue.SetActive(false);       
+        Dialogue.SetActive(false);
+        customers[randomList[cindex]].transform.DOLocalMoveY(-785, 1f).SetEase(Ease.OutBack);
+        cindex++;
+        cnt++;
+        yield return new WaitForSeconds(1);
+        isfirst = true;
+        StartCoroutine("CustomerIn");
     }
 }

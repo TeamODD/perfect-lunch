@@ -6,7 +6,7 @@ public class Slice : MonoBehaviour
 {
     public SpriteRenderer targetSpriteRenderer; // food
     public float power = 0.4f;
-    List<GameObject> sliceList = new List<GameObject>();
+    public List<GameObject> sliceList = new List<GameObject>();// public 붙이기!!!!
     public float min = 100f;//최소 오른쪽 비율
     float originalImageWidth;// 전체 길이
     Vector3 originalLeftEdge;// 왼모퉁이
