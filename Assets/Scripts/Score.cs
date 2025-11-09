@@ -18,7 +18,7 @@ public class Score : MonoBehaviour
     [SerializeField] List<TextMeshProUGUI> scoreText;
     [SerializeField] TextMeshProUGUI finalScoreText;
     [SerializeField] TextMeshProUGUI customerScoreText;
-    [SerializeField] List<string> preferenceList;//손님이 어떤 재료를 선호하는지 리스트화    
+    public List<string> preferenceList;//손님이 어떤 재료를 선호하는지 리스트화    
     [SerializeField] GameObject ScoreBoard;
     [SerializeField] GameObject boardButton;
     int preferencePlus=0;//선호도로 얼마나 보너스를 받는지
