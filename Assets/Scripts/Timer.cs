@@ -16,7 +16,7 @@ public class Timer : MonoBehaviour
         if(gameStart)
         {
             limitTime -= Time.deltaTime;
-            if(Mathf.Floor(limitTime / 60)<10)
+            if(Mathf.Floor(limitTime / 60)<10)//분이 2자리이면
             {
                 if(Mathf.Round(limitTime) % 60<10)
                 {
