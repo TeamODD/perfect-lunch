@@ -170,7 +170,14 @@ public class UIManager : MonoBehaviour
     {   
         yield return new WaitForSeconds(1);
         Dialogue.SetActive(true);
-        DialogueText.text = "감사합니다";
+        if (randomList[cindex] == 0)
+            DialogueText.text = "맛있어 보이네!";
+        else if (randomList[cindex] == 1)
+            DialogueText.text = "감사합니다.";
+        else if (randomList[cindex] == 2)
+            DialogueText.text = "괜찮네요. 맛있어요.";
+        else
+            DialogueText.text = "오~신기한 음식이네요~?";
         yield return new WaitForSeconds(1);
         Dialogue.SetActive(false);
         customers[randomList[cindex]].transform.DOLocalMoveY(-785, 1f).SetEase(Ease.OutBack);
