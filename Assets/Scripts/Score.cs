@@ -114,10 +114,20 @@ public class Score : MonoBehaviour
         uimanager.ispeople = false;
         uimanager.Table.SetActive(false);
         customerScoreText.gameObject.SetActive(true);
+        float waitTime;
+        if(score==0)
+        {
+            waitTime = 1f;
+        }
+        else
+        {
+            waitTime = 1/score;
+        }
+
         for (int i = 0; i <= (int)score; i++)
         {
-            yield return new WaitForSeconds(0.0005f);
             customerScoreText.text = "+" + i;
+            yield return new WaitForSeconds(waitTime);         
         }
         yield return new WaitForSeconds(1f);
         customerScoreText.gameObject.SetActive(false);
